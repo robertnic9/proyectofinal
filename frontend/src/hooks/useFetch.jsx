@@ -14,10 +14,10 @@ const useFetch = (url) => {
     }
 
     const fetchData = async () => {
-      setIsLoading(true);
+      setIsLoading(true); 
       try {
         const resp = await fetch(url, {
-          credentials: "include", // Añadido para mantener las credenciales
+          credentials: "include", 
         });
 
         if (!resp.ok) {

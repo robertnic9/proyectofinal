@@ -69,7 +69,7 @@ export default function Header() {
           {!user ? (
             <Link
               href="/login"
-              className="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800"
+              className="bg-black text-white px-4 py-2 rounded-3xl hover:bg-gray-800"
             >
               Iniciar Sesión
             </Link>
@@ -78,7 +78,7 @@ export default function Header() {
             <div className="relative text-white">
               <button
                 onClick={() => setDropdownOpen(!dropdownOpen)}
-                className="flex items-center space-x-2 bg-black px-4 py-2 rounded-lg hover:text-underline"
+                className="flex items-center space-x-2 bg-black px-4 py-2 rounded-3xl hover:text-underline"
               >
                 <User size={18} />
                 <span>{user.name}</span>

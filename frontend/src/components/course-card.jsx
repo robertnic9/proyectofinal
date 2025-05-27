@@ -20,9 +20,7 @@ export function CourseCard({ course }) {
     }
   }, []);
 
-  // This effect will run whenever userId or course.id changes
   useEffect(() => {
-    // Only make the request if both userId and course.id exist
     if (userId && course?.id) {
       fetch(
         `http://localhost/online/backend/controlers/userfavorites.php?courseId=${course.id}&userId=${userId}`,
@@ -37,7 +35,7 @@ export function CourseCard({ course }) {
         })
         .catch((err) => console.error("Error al obtener favoritos", err));
     }
-  }, [userId, course?.id]); // Add dependencies here
+  }, [userId, course?.id]); 
 
   const toggleFavorite = async () => {
     if (!userId) return alert("Debes iniciar sesión para agregar a favoritos");
@@ -70,7 +68,7 @@ export function CourseCard({ course }) {
   }
 
   return (
-    <div className="w-[24rem] my-12 z-10 mx-auto">
+    <div className="w-[24rem] my-12 z-10 mx-auto shadow-lg">
       <FollowerPointerCard
         title={
           <TitleComponent

@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
-import useFetch from "@/hooks/useFetch"; // Asegúrate de que la ruta sea correcta
+import useFetch from "@/hooks/useFetch"; 
 
 export default function ProfilePage() {
   const user = JSON.parse(localStorage.getItem("user"));
@@ -24,7 +24,7 @@ export default function ProfilePage() {
     confirmPassword: "",
   });
 
-  // Hook personalizado para obtener el progreso del estudiante y los cursos
+  //  obtener el progreso del estudiante y los cursos
   const {
     isLoading: isLoadingProgress,
     isError: isErrorProgress,
